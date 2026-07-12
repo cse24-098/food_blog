@@ -133,10 +133,13 @@ body {
 
 .grid-item h2 {
     padding: 16px 16px 20px;
-    font-size: 18px;
+    font-size: 25px;
     color: #2d2d2d;
     font-weight: 600;
+    font-family: "Yuyu Short", sans-serif;
+    font-style: normal;
 }
+
 
 /* ============================================ */
 /* LOGIN PAGE CONTAINER                       */
