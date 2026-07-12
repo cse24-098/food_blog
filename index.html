@@ -9,10 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yuyu+Short&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuyu+Short&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -26,25 +23,20 @@
     <!-- ========================================== -->
     <header class="header">
         <div class="container">
-            <!-- Logo -->
             <div class="logo">
                 <h1>
                     <i class="fa-solid fa-bowl-food"></i> Food Blog
                 </h1>
             </div>
-
-            <!-- Navigation -->
             <nav class="nav">
                 <a href="index.html" class="active">Home</a>
                 <a href="recipes.html">Recipes</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </nav>
-
-            <!-- User Profile Icon -->
             <div class="user-profile">
                 <a href="login.html" aria-label="Login or Sign up">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <i class="fa-solid fa-circle-user" style="color: #f9a826;"></i>
                 </a>
             </div>
         </div>
@@ -60,47 +52,32 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- RECIPE GRID                               -->
+    <!-- TABBED RECIPE SECTION                     -->
     <!-- ========================================== -->
-    <main>
-        <div class="grid-container">
-            <!-- Recipe Card 1 -->
-            <article class="grid-item">
-                <img src="images/burger.webp" alt="Burger" />
-                <h2>Here is how to make a delicious burger.</h2>
-            </article>
-
-            <!-- Recipe Card 2 -->
-            <article class="grid-item">
-                <img src="images/chicken_salad.jpg" alt="Fresh chicken salad bowl" />
-                <h2>Here is how to make a chicken salad bowl.</h2>
-            </article>
-
-            <!-- Recipe Card 3 -->
-            <article class="grid-item">
-                <img src="images/chicken_wrap.jpg" alt="Chicken Wrap" />
-                <h2>Here is how to make a tasty chicken wrap.</h2>
-            </article>
-
-            <!-- Recipe Card 4 -->
-            <article class="grid-item">
-                <img src="images/fried_chicken.jpg" alt="Fried chicken" />
-                <h2>Here is how to make a delicious fried chicken with indian parata</h2>
-            </article>
-
-            <!-- Recipe Card 5 -->
-            <article class="grid-item">
-                <img src="images/fruit_salad_bowl.jpg" alt="Fruit Salad Bowl" />
-                <h2>Here is how to make a refreshing fruit bowl</h2>
-            </article>
-
-            <!-- Recipe Card 6 -->
-            <article class="grid-item">
-                <img src="images/pancakes.webp" alt="Pancakes" />
-                <h2>Here is how to enjoy your breakfast with some delicious fresh pancakes</h2>
-            </article>
+    <section class="recipe-section">
+        <div class="section-header">
+            <h2><i class="fas fa-utensils"></i> Explore Recipes</h2>
         </div>
-    </main>
+
+        <!-- Tab Buttons -->
+        <div class="tabs">
+            <button class="tab-btn active" data-category="all"> All</button>
+            <button class="tab-btn" data-category="vegan">Vegan</button>
+            <button class="tab-btn" data-category="pasta">Pasta</button>
+            <button class="tab-btn" data-category="meat">Meat</button>
+            <button class="tab-btn" data-category="dessert">Dessert</button>
+            <button class="tab-btn" data-category="breakfast">Breakfast</button>
+            <button class="tab-btn" data-category="lunch">Lunch</button>
+            <button class="tab-btn" data-category="dinner">Dinner</button>
+            <button class="tab-btn" data-category="gluton-free">Gluton Free</button>
+            <button class="tab-btn" data-category="cakes">Cakes</button>
+        </div>
+
+        <!-- Recipe Grid -->
+        <div class="recipe-grid" id="recipeGrid">
+            <!-- All recipes injected by JavaScript -->
+        </div>
+    </section>
 
     <!-- ========================================== -->
     <!-- FOOTER                                    -->
@@ -118,5 +95,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
