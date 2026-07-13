@@ -134,3 +134,67 @@ renderRecipes('all');
 
 console.log('🍽️ Tabbed recipe section loaded!');
 console.log(`📊 ${recipes.length} recipes available`);
+
+// ============================================
+// SEARCH FUNCTIONALITY
+// ============================================
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+
+function performSearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    
+    if (!query) {
+        // If search is empty, show all recipes
+        renderRecipes('all');
+        return;
+    }
+
+    // Filter recipes by title or description
+    const filtered = recipes.filter(recipe => {
+        return recipe.title.toLowerCase().includes(query) || 
+               recipe.description.toLowerCase().includes(query);
+    });
+
+    // Display results
+    const recipeGrid = document.getElementById('recipeGrid');
+    
+    if (filtered.length === 0) {
+        recipeGrid.innerHTML = `
+            <div class="no-recipes">
+                <i class="fas fa-search"></i>
+                <p>No recipes found for "<strong>${query}</strong>"</p>
+                <p style="font-size: 14px; color: #888;">Try searching for "chicken", "pasta", or "vegan"</p>
+            </div>
+        `;
+        return;
+    }
+
+    // Render filtered recipes
+    recipeGrid.innerHTML = filtered.map(recipe => `
+        <article class="grid-item">
+            <img src="${recipe.image}" alt="${recipe.title}" />
+            <h2>${recipe.title}</h2>
+            <div class="recipe-meta">
+                <span><i class="far fa-clock"></i> ${recipe.time}</span>
+                <span><i class="far fa-heart"></i> ${recipe.likes}</span>
+            </div>
+        </article>
+    `).join('');
+}
+
+// Event listeners
+searchBtn.addEventListener('click', performSearch);
+
+searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        performSearch();
+    }
+});
+
+// Clear search when clicking a tab
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        searchInput.value = ''; // Clear search input
+    });
+});

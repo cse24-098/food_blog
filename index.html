@@ -36,19 +36,35 @@
             </nav>
             <div class="user-profile">
                 <a href="login.html" aria-label="Login or Sign up">
-                    <i class="fa-solid fa-circle-user" style="color: #f9a826;"></i>
+                    <i class="fa-regular fa-user" style="color: #f9a826;"></i>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- ========================================== -->
-    <!-- HERO SECTION                              -->
+    <!-- HERO SECTION WITH OVERLAID SEARCH         -->
     <!-- ========================================== -->
     <section class="hero">
-        <img src="images/hero_image.webp" alt="Delicious food spread on a table" />
-        <h2>Welcome to My Food Blog</h2>
-        <p>Discover delicious recipes and cooking tips!</p>
+        <img src="images/home_page.jpg" alt="Delicious food spread on a table" />
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2>Welcome to My Food Blog</h2>
+                <p>Discover delicious recipes and cooking tips!</p>
+            </div>
+
+            <div class="hero-search">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for recipes..." 
+                    class="search-input"
+                />
+                <button id="searchBtn" class="search-btn-hero">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        </div>
     </section>
 
     <!-- ========================================== -->
@@ -78,6 +94,14 @@
             <!-- All recipes injected by JavaScript -->
         </div>
     </section>
+
+    <section>
+        <!--carousel seaction for newest recipes-->
+    </section>
+
+    <!--might want to add a learn about food culture and all that-->
+
+    <!--what viewers say about our food-->
 
     <!-- ========================================== -->
     <!-- FOOTER                                    -->
