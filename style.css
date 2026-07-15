@@ -243,8 +243,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
 }
 
 .grid-item:hover {
@@ -741,4 +740,186 @@ body {
         padding: 10px 28px;
         font-size: 14px;
     }
+}
+
+/* ============================================ */
+/* REVIEWS SECTION                             */
+/* ============================================ */
+.reviews-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* Review Card */
+.review-card {
+    background: #ffffff;
+    border: 1px solid #f0ede8;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Stars */
+.review-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.review-stars i {
+    color: #f9a826;
+}
+
+/* Review Text */
+.review-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2d2d2d;
+    margin-bottom: 16px;
+    flex: 1;
+    font-style: italic;
+}
+
+.review-text::before {
+    content: '"';
+    font-size: 24px;
+    color: #f9a826;
+    font-family: Georgia, serif;
+    margin-right: 2px;
+}
+
+.review-text::after {
+    content: '"';
+    font-size: 24px;
+    color: #f9a826;
+    font-family: Georgia, serif;
+    margin-left: 2px;
+}
+
+/* Review Author */
+.review-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0ede8;
+    padding-top: 14px;
+    margin-top: 4px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #2d2d2d;
+    font-size: 14px;
+}
+
+.review-date {
+    font-size: 13px;
+    color: #999;
+}
+
+/* ============================================ */
+/* RESPONSIVE - REVIEWS                        */
+/* ============================================ */
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .review-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .review-text::before,
+    .review-text::after {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        padding: 16px;
+    }
+
+    .review-author {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+.kitchen {
+    display: flex;
+    justify-content: center;
+    background: #fdf8f1;
+    border-top: 1px solid #ffe6b4;
+    border-bottom: 1px solid #ffe6b4;
+    padding: 40px 24px;
+}
+
+.my-kitchen {
+    display: flex;           /* ← Make this a flex container! */
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;      /* Vertically centers the content */
+}
+
+.my-kitchen-image {
+    flex: 0 0 300px;         /* Fixed width, won't shrink */
+}
+
+.my-kitchen-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.my-kitchen-content {
+    flex: 1;                 /* Takes remaining space */
+}
+
+.my-kitchen-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+}
+
+.my-kitchen-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-family: Georgia, serif;
 }
