@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Food Blog</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Yuyu+Short&display=swap" rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+        <!-- Your Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="recipes.css">
+        
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>
+                        <i class="fa-solid fa-bowl-food"></i> Food Blog
+                    </h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html" class="active">Recipes</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="menu">
+                    <a href="#" aria-label="Menu">
+                        <i class="fa-duotone fa-solid fa-bars" style="color: #f9a826;"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="collection-recipes">
+            <div class="my-kitchen-content">
+                <h2>All Recipes</h2>
+                <p>Recipes, all tested in a real kitchen, all worth making on a Tuesday.</p>
+            </div>
+        </section>
+
+        <section class="recipe-section">
+            <div class="section-header">
+                <h2><i class="fas fa-utensils"></i> Explore Recipes</h2>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="tabs">
+                <button class="tab-btn active" data-category="all"> All</button>
+                <button class="tab-btn" data-category="vegan">Vegan</button>
+                <button class="tab-btn" data-category="pasta">Pasta</button>
+                <button class="tab-btn" data-category="meat">Meat</button>
+                <button class="tab-btn" data-category="dessert">Dessert</button>
+                <button class="tab-btn" data-category="breakfast">Breakfast</button>
+                <button class="tab-btn" data-category="lunch">Lunch</button>
+                <button class="tab-btn" data-category="dinner">Dinner</button>
+                <button class="tab-btn" data-category="gluton-free">Gluton Free</button>
+                <button class="tab-btn" data-category="cakes">Cakes</button>
+            </div>
+
+            <!-- Recipe Grid -->
+            <div class="recipe-grid" id="recipeGrid">
+                <!-- All recipes injected by JavaScript -->
+            </div>
+        </section>
+
+        <script src="recipes.js"></script>
+
+    </body>
+
+</html>

@@ -16,6 +16,7 @@
 
     <!-- Your Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
     <!-- ========================================== -->
@@ -23,11 +24,13 @@
     <!-- ========================================== -->
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <h1>
-                    <i class="fa-solid fa-bowl-food"></i> Food Blog
-                </h1>
-            </div>
+            <a href="index.html" style="text-decoration: none ;">
+                <div class="logo">
+                    <h1>
+                        <i class="fa-solid fa-bowl-food"></i> Food Blog
+                    </h1>
+                </div>
+            </a>
             <nav class="nav">
                 <a href="index.html" class="active">Home</a>
                 <a href="recipes.html">Recipes</a>
@@ -67,34 +70,31 @@
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- TABBED RECIPE SECTION                     -->
-    <!-- ========================================== -->
-    <section class="recipe-section">
-        <div class="section-header">
-            <h2><i class="fas fa-utensils"></i> Explore Recipes</h2>
-        </div>
-
-        <!-- Tab Buttons -->
-        <div class="tabs">
-            <button class="tab-btn active" data-category="all"> All</button>
-            <button class="tab-btn" data-category="vegan">Vegan</button>
-            <button class="tab-btn" data-category="pasta">Pasta</button>
-            <button class="tab-btn" data-category="meat">Meat</button>
-            <button class="tab-btn" data-category="dessert">Dessert</button>
-            <button class="tab-btn" data-category="breakfast">Breakfast</button>
-            <button class="tab-btn" data-category="lunch">Lunch</button>
-            <button class="tab-btn" data-category="dinner">Dinner</button>
-            <button class="tab-btn" data-category="gluton-free">Gluton Free</button>
-            <button class="tab-btn" data-category="cakes">Cakes</button>
-        </div>
-
-        <!-- Recipe Grid -->
-        <div class="recipe-grid" id="recipeGrid">
-            <!-- All recipes injected by JavaScript -->
+    <!--editors pick-->
+   <section class="editors-pick">
+        <div class="editors-pick-item">
+            <div class="editors-pick-item-content">
+                <h3>Editors Pick - 16 July 2026</h3>
+                <h2>Brown Butter Spaghetti with Crispy Capers & Lemon</h2>
+                <p>This is weeknight dinner elevated to something worth slowing down for. Brown butter transforms simple pasta into something deeply nutty and complex — a technique that takes three minutes and changes everything.</p>
+                <a href="#" class="load-more-link">
+                    Read Recipe <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="my-kitchen-image">
+                <img src="images/brown_butter_lemon_spaghetti.webp" alt="brown_butter_lemon_spaghetti">
+            </div>
         </div>
     </section>
 
+
+    <!--browse all categories-->
+    <section>
+        <div>
+
+        </div>
+    </section>
+   
     <!-- Newest Recipes Section -->
     <section class="newest-section">
         <div class="section-header">
@@ -195,7 +195,7 @@
                 <p>Real food, made by real people, for real life.</p>
                 <p>Simmer started as a Saturday morning notebook, scribbled recipes from my grandmother, my travels, and my mistakes. It grew into something bigger than I expected. Every recipe here has been cooked at least a dozen times in my actual kitchen, on a Tuesday, when I was tired and hungry.
 
-No food styling tricks. No ingredients you can't find. Just honest cooking that tastes exactly like the photos.</p>
+                No food styling tricks. No ingredients you can't find. Just honest cooking that tastes exactly like the photos.</p>
                 <a href="#" class="load-more-link">
                     Read my story <i class="fa-solid fa-arrow-right"></i>
                 </a>

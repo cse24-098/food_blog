@@ -486,6 +486,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px 60px;
+    background: #fdf8f1;
+    border-top: 1px solid #ffe6b4;
+    border-bottom: 1px solid #ffe6b4;
 }
 
 /* Section Header - Flex container */
@@ -493,6 +496,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 25px;
     margin-bottom: 24px;
     flex-wrap: wrap;
     gap: 12px;
@@ -501,6 +505,7 @@ body {
 .section-header h2 {
     font-size: 28px;
     font-weight: 700;
+    font-family: Georgia, serif;
     color: #2d2d2d;
     display: flex;
     align-items: center;
@@ -874,7 +879,7 @@ body {
     }
 }
 
-.kitchen {
+.kitchen, .collection-recipes {
     display: flex;
     justify-content: center;
     background: #fdf8f1;
@@ -923,3 +928,4 @@ body {
     margin-bottom: 16px;
     font-family: Georgia, serif;
 }
+
