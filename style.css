@@ -265,9 +265,10 @@ body {
 
 .grid-item h2 {
     padding: 16px 16px 20px;
-    font-size: 25px;
+    font-size: 15px;
     color: #2d2d2d;
     font-weight: 600;
+    font-family: "Inter", sans-serif;
     font-style: normal;
 }
 
@@ -582,10 +583,10 @@ body {
 
 .grid-item h3 {
     padding: 16px 16px 20px;
-    font-size: 18px;
+    font-size: 15px;
     color: #2d2d2d;
     font-weight: 600;
-    font-family: "Yuyu Short", sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* ============================================ */
